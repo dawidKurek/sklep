@@ -1,0 +1,63 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;   
+}
+body{
+    font-size: 1.6rem;
+    padding: 15px;
+}
+input{
+    font-size: 1.6rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+button{
+    font-size: 2rem;
+    padding:5px 10px;
+    border: 1px solid #DAA520;
+    border-radius:5px;
+    color: #DAA520;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+button:hover{
+    color: #fff;
+    background-color: #DAA520;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    width: 95%;
+}
+.logging-box{
+    display: flex;
+    flex-direction: column;
+
+
+    padding: 20px;
+    border-radius: 10px;
+
+
+    -webkit-box-shadow: 0px 0px 26px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 26px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 26px -4px rgba(0,0,0,0.75);
+}
+.logging-box input{
+    padding-left: 5px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.signin-button{
+
+}

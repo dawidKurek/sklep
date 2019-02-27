@@ -1,0 +1,51 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;   
+}
+body{
+    font-size: 1.6rem;
+    padding: 15px;
+}
+input{
+    font-size: 1.6rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#product-photo{
+    border: none;
+}
+textarea{
+    font-size: 1.6rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px
+}
+button{
+    font-size: 2rem;
+    padding:5px 10px;
+    border: 1px solid #DAA520;
+    border-radius:5px;
+    color: #DAA520;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+button:hover{
+    color: #fff;
+    background-color: #DAA520;
+}
+.add-new-poster-box{
+    display: flex;
+    flex-direction: column;
+}
