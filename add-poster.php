@@ -1,5 +1,8 @@
 <?php include_once"header.php"; ?>
 <body>
+    <header>
+        <?php include_once"nav.php"; ?>
+    </header>
     <main>
         <form enctype="multipart/form-data" method="" action="" class="add-new-poster-box">
             <label for="price">Cena
