@@ -19,7 +19,7 @@ if(empty($_SESSION['user_name'])){
         <li><a href="index.php">Strona główna</a></li>
         <li><a href="">Twoje konto</a></li>
         <li><a href="add-poster.php?site-title=Dodaj ogłoszenie">Dodaj ogłoszenie</a></li>
-        <li><a href="signout.php">Wyloguj</a></li>      
+        <li><a href="PHP/signout-script.php">Wyloguj</a></li>      
     </ol>
     
 </div>       
