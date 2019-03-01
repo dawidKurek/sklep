@@ -19,7 +19,10 @@ $user_pwd=$_POST['user-pwd'];
             //Błędny login
             header("Location: ../signin.php?error=Błędny login lub hasło&user-name=$user_name");
         }else{
-            $_SESSION['user_name']=$user_name;
+            $row=mysqli_fetch_assoc($result);
+
+            $_SESSION['user_id']=$row['id'];
+            $_SESSION['user_name']=$row['username'];
             header("Location: ../index.php");
         }
     }
