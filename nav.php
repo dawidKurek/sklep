@@ -1,6 +1,5 @@
 <div class="log-bar">
 <?php
-session_start();
 
 if(empty($_SESSION['user_name'])){
     echo'
