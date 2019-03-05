@@ -1,30 +1,64 @@
 <?php include_once"header.php" ?>
 <body>
     <header>
-        <?php include_once"nav.php"; ?>
+        <?php require_once"connect.php"; include_once"nav.php"; ?>
     </header>
     <main>
         <div class="poster-container">
-
-            <div class="image">
-                <img src="img/s9plus-1.png">
+        <?php
+            $query="SELECT * FROM posters WHERE id_poster=".$_GET['id_poster']." ";
+            $result=mysqli_query($dbc, $query);
+            $row=mysqli_fetch_assoc($result);         
+        ?>
+            <div id="image">
+                <img src="img/<?=$row['pic1']?>">
             </div>
 
             <div class="gallery">
-                <div class="small-pic"><img src="img/s9plus-2.png"></div>
-                <div class="small-pic"><img src="img/s9plus-3.png"></div>
-                <div class="small-pic"><img src="img/s9plus-2.png"></div>
-                <div class="small-pic"><img src="img/s9plus-3.png"></div>
-                <div class="small-pic"><img src="img/s9plus-2.png"></div>
+                <?php    
+                    $pictures=array($row['pic1'], $row['pic2'], $row['pic3'], $row['pic4'], $row['pic5']);
+                    
+                    $i=1;
+                    foreach($pictures as $pic){
+                        if($pic!=''){
+                            echo'<div onClick="changeImage('.$i++.')" class="small-pic"><img src="img/'.$pic.'"></div>';
+                        }
+                    } 
+                ?>   
+                
             </div>
 
-            <h2 class="price">999 zł</h2>
-            <p class="title">Samsung Galaxy s9+</p>
+            <h2 class="price"><?=$row['price']?> zł</h2>
+            <p class="title"><?=$row['title']?></p>
 
             <div class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor nulla euismod purus ornare, a dignissim tellus lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer tincidunt mollis elementum. Vestibulum efficitur luctus tincidunt. Pellentesque gravida tincidunt leo, sed pulvinar urna blandit sed. Donec sodales in est nec semper. Fusce euismod sit amet nisi nec molestie. Ut maximus dui lorem, vitae accumsan augue mattis eget. Donec sollicitudin lacinia pharetra. Quisque lectus nisi, imperdiet sit amet scelerisque in, malesuada ac nisi.
+                <?=$row['desc']?>
             </div>
+            
+        
+
+            
         </div>
     </main>    
 </body>
+<script>
+    var array = <?php echo json_encode($pictures); ?>;
+    var image = document.getElementById('image');
+
+    
+    function changeImage(number){
+        
+        switch (number){
+            case 1:
+                image.innerHTML='<img src="img/' +array[0]+ '">' ;
+            break;
+            case 2:
+                image.innerHTML='<img src="img/' +array[1]+ '">' ;
+            break;
+            case 3:
+                image.innerHTML='<img src="img/' +array[2]+ '">' ;
+            break;
+        }
+    }
+</script>
 </html>

@@ -232,13 +232,13 @@ textarea{
     flex-direction: column;
     margin-top: 50px;
 }
-.image{
+#image{
     display: flex;
     justify-content: center;
 
     height: 400px;
 }
-.image img{
+#image img{
     height: 100%;
 }
 .gallery{
@@ -247,6 +247,7 @@ textarea{
 }
 .small-pic{
     height: 92px;
+    cursor: pointer;
 }
 .small-pic img{
     height: 100%;

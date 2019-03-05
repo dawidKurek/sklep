@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <?php include_once"nav.php"; ?>
+        <?php require_once"connect.php"; include_once"nav.php"; ?>
 
         <form class="search-bar" method="post" action="">
             <input type="text" name="search" class="search">
@@ -21,36 +21,27 @@
      
     <main>
         <ul>
-            <li class="poster">
-                <a href="poster.php?id=5&site-title=Ogłoszenie">
-                    <h2 class="price">999 zł</h2>
-                    <p class="title">Samsung Galaxy s9+</p>
+        <?php
+            $query="SELECT * FROM posters ORDER BY id_poster DESC";
+            $result=mysqli_query($dbc, $query);
 
-                    <div class="picture">
-                        <img src="img/s9plus-1.png">
-                    </div>
-                </a>
-            </li>
-            <li class="poster">
-                <a href="poster.php?id=1&site-title=Ogłoszenie">
-                    <h2 class="price">3999 zł</h2>
-                    <p class="title">iPhone X</p>
+               while($row=mysqli_fetch_assoc($result)){
+                    
+                echo'
+                    <li class="poster">
+                        <a href="poster.php?id_poster='.$row['id_poster'].'&site-title=Ogłoszenie">
+                            <h2 class="price">'.$row['price'].' zł</h2>
+                            <p class="title">'.$row['title'].'</p>
 
-                    <div class="picture">
-                        <img src="img/x1.png">
-                    </div>
-                </a>
-            </li>
-            <li class="poster">
-                <a href="poster.php?id=10&site-title=Ogłoszenie">
-                    <h2 class="price">2999 zł</h2>
-                    <p class="title">Xiaomi Mi8 Pro</p>
-
-                    <div class="picture">
-                        <img src="img/8pro1.png">
-                    </div>
-                </a>
-            </li>
+                            <div class="picture">
+                                <img src="img/'.$row['pic1'].'">
+                            </div>
+                        </a>
+                    </li>
+                ';
+            }
+        ?>
+            
         </ul>
     </main>
 </body>
