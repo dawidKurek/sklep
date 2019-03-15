@@ -1,11 +1,14 @@
-<?php include_once"header.php" ?>
+<?php require_once"header.php";?>
 <body>
-    <header>
-        <?php require_once"connect.php"; include_once"nav.php"; ?>
-    </header>
-    <main>
-        <div class="poster-container">
+<header>
+<?php require_once"nav.php";  ?>
+
+</header>
+<main>
+    <div class="poster-container">
         <?php
+            require_once"connect.php";
+
             $query="SELECT * FROM posters WHERE id_poster=".$_GET['id_poster']." ";
             $result=mysqli_query($dbc, $query);
             $row=mysqli_fetch_assoc($result);         
@@ -34,13 +37,11 @@
             <div class="description">
                 <?=$row['desc']?>
             </div>
-            
+            <a class="a-button" href="my-poster-edit.php?id_poster=<?=$_GET['id_poster']?>">Edytuj</a>
         
 
-            
-        </div>
-    </main>    
-</body>
+    </div>
+</main>
 <script>
     var array = <?php echo json_encode($pictures); ?>;
     var image = document.getElementById('image');
@@ -67,4 +68,4 @@
         }
     }
 </script>
-</html>
+</body>

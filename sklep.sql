@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 01 Mar 2019, 16:05
+-- Czas generowania: 15 Mar 2019, 16:42
 -- Wersja serwera: 10.1.36-MariaDB
 -- Wersja PHP: 7.2.11
 
@@ -46,31 +46,13 @@ CREATE TABLE `posters` (
 --
 
 INSERT INTO `posters` (`id_poster`, `id`, `price`, `title`, `desc`, `pic1`, `pic2`, `pic3`, `pic4`, `pic5`) VALUES
-(1, 1, 12312, 'asdas', 'fghgthr', 'cos.jpg', 'lol.jpeg', 'rooasd.png', 'dasdas.gif', 'jsdnasjkd.jpg'),
-(2, 1, 111, 'aaa', 'aaa', 'cos.jpg', 'lol.jpeg', 'rooasd.png', 'dasdas.gif', 'jsdnasjkd.jpg'),
-(3, 1, 213123, 'asdasd', 'grfgege', 'cos.jpg', 'lol.jpeg', 'rooasd.png', 'dasdas.gif', 'jsdnasjkd.jpg'),
-(4, 1, 999, 'lklkl', 'lklkl', 'x2.png', 'lol.jpeg', 'rooasd.png', 'dasdas.gif', 'jsdnasjkd.jpg'),
-(5, 1, 232312, 'sdffsd', 'fsd fdsdsf sf dsf sfdsd', 'x3.png', '', '', '', ''),
-(6, 1, 232312, 'sdffsd', 'fsd fdsdsf sf dsf sfdsd', 'x3.png', '', '', '', ''),
-(7, 1, 12, 'aaa', 'asdasd', 'x3.png', '', '', '', ''),
-(8, 1, 123, 'asd', 'asdasd', 's9plus-2.png', 's9plus-3.png', 'x1.png', 'x2.png', 'x3.png'),
-(9, 1, 123, 'asd', 'asdasd', 's9plus-1.png', 's9plus-2.png', 'x1.png', 'x2.png', 'x3.png'),
-(10, 1, 5645, 'dfgdf', ' fdgdfgdfg ', 'x1.png', 'x2.png', 'x3.png', '', ''),
-(11, 1, 34534, 'sdfsdf', 'sdfsdfs', 'x2.png', '', '', '', ''),
-(12, 1, 34534, 'sdfsdf', 'sdfsdfs', 'x2.png', '', '', '', ''),
-(13, 2, 9999, 'qwereqwr', ' ewrewrewqr qwer wer wer ', 's9plus-3.png', '', '', '', ''),
-(14, 2, 324, 'dfgdfg', 'dfgdfgdf', 'zdjjacka.jpg', 'zdjjana.jpg', 'zdjzuzanny.jpg', '', ''),
-(15, 2, 324, 'dfgdfg', 'dfgdfgdf', 'zdjjacka.jpg', 'zdjjana.jpg', 'zdjzuzanny.jpg', '', ''),
-(16, 2, 324, 'dfgdfg', 'dfgdfgdf', 'zdjjacka.jpg', 'zdjjana.jpg', 'zdjzuzanny.jpg', '', ''),
-(17, 3, 1234, 'Samsung Galaxy s9+', 'Polecam', 's9plus-1.png', 's9plus-2.png', 's9plus-3.png', '', ''),
-(18, 3, 1234, 'Samsung Galaxy s9+', 'polecam', 's9plus-1.png', 's9plus-2.png', 's9plus-3.png', '', ''),
-(19, 3, 1234, 'Samsung Galaxy s9+', 'polecam', 's9plus-1.png', 's9plus-2.png', 's9plus-3.png', '', ''),
-(20, 3, 1234, 'Samsung Galaxy s9+', 'polecam', 's9plus-1.png', 's9plus-2.png', 's9plus-3.png', '', ''),
-(21, 3, 1234, 'Samsung Galaxy s9+', 'polecam', 's9plus-1.png', 's9plus-2.png', 's9plus-3.png', '', ''),
-(22, 3, 4000, 'iPhone X', 'Najlepszy', 'x1.png', 'x2.png', 'x3.png', '', ''),
-(23, 3, 4000, 'iPhone X', 'Najlepszy', '1551451587x1.png', '1551451587x2.png', '1551451587x3.png', '', ''),
-(24, 3, 1234, 'daw', 'daw', '1551451652x1.png', '1551451652x2.png', '1551451652x3.png', '', ''),
-(25, 3, 9999, '435543', '34345345df fgd gdfg dfg', '1551452267p8lite3.png', '', '', '', '');
+(5, 1, 2599, 'HTC', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nisl eu vestibulum auctor, purus velit consequat enim, sit amet convallis est diam consequat neque. Cras velit nisi, laoreet nec ante vel, sodales sagittis magna. Quisque rutrum purus in facilisis tempus. Ut gravida ipsum id egestas consectetur. Nullam finibus, massa ornare condimentum elementum, ex justo sodales lacus, eu pulvinar urna ex et tellus. Aliquam erat volutpat. In dignissim mi maximus, ultrices elit sit amet, vestibulum nulla. Cras mauris lacus, ultricies ac enim vel, tempus accumsan elit.', 'x3.png', '', '', '', ''),
+(8, 1, 1999, 'Sony', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nisl eu vestibulum auctor, purus velit consequat enim, sit amet convallis est diam consequat neque. Cras velit nisi, laoreet nec ante vel, sodales sagittis magna. Quisque rutrum purus in facilisis tempus. Ut gravida ipsum id egestas consectetur. Nullam finibus, massa ornare condimentum elementum, ex justo sodales lacus, eu pulvinar urna ex et tellus. Aliquam erat volutpat. In dignissim mi maximus, ultrices elit sit amet, vestibulum nulla. Cras mauris lacus, ultricies ac enim vel, tempus accumsan elit.', 's9plus-2.png', 's9plus-3.png', 'x1.png', 'x2.png', 'x3.png'),
+(9, 1, 1399, 'Xiaomi', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nisl eu vestibulum auctor, purus velit consequat enim, sit amet convallis est diam consequat neque. Cras velit nisi, laoreet nec ante vel, sodales sagittis magna. Quisque rutrum purus in facilisis tempus. Ut gravida ipsum id egestas consectetur. Nullam finibus, massa ornare condimentum elementum, ex justo sodales lacus, eu pulvinar urna ex et tellus. Aliquam erat volutpat. In dignissim mi maximus, ultrices elit sit amet, vestibulum nulla. Cras mauris lacus, ultricies ac enim vel, tempus accumsansdf elit. Å¼Ã³Å‚Ä‡', 's9plus-1.png', 's9plus-2.png', 'x1.png', 'x2.png', 'x3.png'),
+(10, 1, 4999, 'iPhone X', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nisl eu vestibulum auctor, purus velit consequat enim, sit amet convallis est diam consequat neque. Cras velit nisi, laoreet nec ante vel, sodales sagittis magna. Quisque rutrum purus in facilisis tempus. Ut gravida ipsum id egestas consectetur. Nullam finibus, massa ornare condimentum elementum, ex justo sodales lacus, eu pulvinar urna ex et tellus. Aliquam erat volutpat. In dignissim mi maximus, ultrices elit sit amet, vestibulum nulla. Cras mauris lacus, ultricies ac enim vel, tempus accumsan elit.', 'x1.png', 'x2.png', 'x3.png', '', ''),
+(21, 3, 3499, 'Samsung Galaxy s9+', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nisl eu vestibulum auctor, purus velit consequat enim, sit amet convallis est diam consequat neque. Cras velit nisi, laoreet nec ante vel, sodales sagittis magna. Quisque rutrum purus in facilisis tempus. Ut gravida ipsum id egestas consectetur. Nullam finibus, massa ornare condimentum elementum, ex justo sodales lacus, eu pulvinar urna ex et tellus. Aliquam erat volutpat. In dignissim mi maximus, ultrices elit sit amet, vestibulum nulla. Cras mauris lacus, ultricies ac enim vel, tempus accumsan elit.', 's9plus-1.png', 's9plus-2.png', 's9plus-3.png', '', ''),
+(26, 4, 2799, 'Samsung Galaxy s9+', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper commodo leo et lacinia. Aliquam pellentesque tristique felis, ut convallis est varius ultrices. Mauris at lorem id arcu egestas tincidunt ut vitae diam. Proin id semper odio. Aenean consequat augue ut est accumsan accumsan. Cras nec sem et est pellentesque ultricies eget euismod leo. Etiam interdum pharetra tellus in ullamcorper. Sed placerat libero vel elementum porttitor.', '1551784781s9plus-1.png', '1551784781s9plus-2.png', '1551784781s9plus-3.png', '', ''),
+(27, 7, 1499, 'Xiaomi Mi8 Pro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada a tortor ac tincidunt. Sed pharetra est sit amet nulla blandit malesuada. Cras tellus risus, lacinia nec turpis vel, posuere venenatis diam. Donec aliquam non ex eu convallis. Cras facilisis, odio at feugiat suscipit, metus ipsum tristique ante, sit amet tincidunt elit est ut eros. Vivamus vulputate imperdiet orci vel fringilla. In ultrices ornare ipsum sed porttitor. Curabitur a tempus metus, vitae consectetur nisl. Vestibulum dictum iaculis ligula non egestas. Suspendisse potenti.', '15526644048pro1.png', '15526644048pro2.png', '15526644048pro3.png', '', '');
 
 -- --------------------------------------------------------
 
@@ -93,7 +75,8 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`) VALUES
 (1, 'dawid', 'bca4c1486c8153b43d0030277dc1b346a5686c0a', 'dawidkurekofficial@gmail.com'),
 (2, 'daw', 'c5dd76f326bdb69bf5be32d4949e96619563479e', 'daw@gmail.com'),
 (3, 'dk', 'd5658db4705ff5c6ad3f152c4393f61ac86bd27f', 'dk@wp.pl'),
-(4, 'remek', '74a20f7718ad02886c9dce8a7c94d2c560528114', 'remigiusz@onet.pl');
+(4, 'remek', '74a20f7718ad02886c9dce8a7c94d2c560528114', 'remigiusz@onet.pl'),
+(7, 'dikey', '3619ef165bcc63c66c9c747a686762dee2dead5d', 'dikey@gmail.com');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -119,13 +102,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT dla tabeli `posters`
 --
 ALTER TABLE `posters`
-  MODIFY `id_poster` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_poster` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

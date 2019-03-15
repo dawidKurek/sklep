@@ -16,8 +16,9 @@ if(empty($_SESSION['user_name'])){
             
     <ol class="site-menu">
         <li><a href="index.php">Strona główna</a></li>
-        <li><a href="">Twoje konto</a></li>
+        <li><a href="my-account.php?site-title=Moje konto">Moje konto</a></li>
         <li><a href="add-poster.php?site-title=Dodaj ogłoszenie">Dodaj ogłoszenie</a></li>
+        <li><a href="my-posters.php?site-title=Moje ogłoszenia">Moje ogłoszenia</a></li>
         <li><a href="PHP/signout-script.php">Wyloguj</a></li>      
     </ol>
     

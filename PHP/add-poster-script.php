@@ -1,7 +1,4 @@
-
 <?php
-session_start();
-
 include_once"../header.php";
 
 if(isset($_POST['add-new-poster-button'])){

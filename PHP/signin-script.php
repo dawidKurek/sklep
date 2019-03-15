@@ -4,8 +4,8 @@ if(isset($_POST['signin-button'])){
 
     require_once"../connect.php";
 
-$user_name=$_POST['user-name'];
-$user_pwd=$_POST['user-pwd'];
+$user_name=mysqli_real_escape_string($dbc, $_POST['user-name']);
+$user_pwd=mysqli_real_escape_string($dbc, $_POST['user-pwd']);
 
     if(empty($user_name) || empty($user_pwd)){
         //Puste pola
