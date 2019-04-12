@@ -18,7 +18,7 @@
             <textarea name="description" id="description"><?=@$_GET['description']?></textarea>
 
             <div class="error"><?=@$_GET['error']?></div>
-            <button type="submit" name="add-new-poster-button">Zatwierdź ogłoszenie</button>
+            <button type="submit" name="add-new-poster-button">Dodaj ogłoszenie</button>
         </form>
     </main>
 </body>
