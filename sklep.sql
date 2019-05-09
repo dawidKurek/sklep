@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 15 Mar 2019, 16:42
+-- Czas generowania: 12 Kwi 2019, 12:00
 -- Wersja serwera: 10.1.36-MariaDB
 -- Wersja PHP: 7.2.11
 
@@ -21,6 +21,32 @@ SET time_zone = "+00:00";
 --
 -- Baza danych: `sklep`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `addresses`
+--
+
+CREATE TABLE `addresses` (
+  `id` int(11) NOT NULL,
+  `f_name` text COLLATE utf8_polish_ci NOT NULL,
+  `l_name` text COLLATE utf8_polish_ci NOT NULL,
+  `street` text COLLATE utf8_polish_ci NOT NULL,
+  `house_num` text COLLATE utf8_polish_ci NOT NULL,
+  `city` text COLLATE utf8_polish_ci NOT NULL,
+  `postal-code` text COLLATE utf8_polish_ci NOT NULL,
+  `country` text COLLATE utf8_polish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `addresses`
+--
+
+INSERT INTO `addresses` (`id`, `f_name`, `l_name`, `street`, `house_num`, `city`, `postal-code`, `country`) VALUES
+(1, 'Dawid', 'Kurek', 'Chabrowa', '13', 'Pietrzykowice', '34-326', 'Polska'),
+(3, 'D', 'K', 'Chabrowa ', '13', 'Pietrzykowice', '34-326', 'Polska'),
+(4, 'Remigiusz', 'Nowak', 'Kolorowa', '9', 'Å»ywiec', '34-300', 'Polska');
 
 -- --------------------------------------------------------
 
@@ -46,13 +72,29 @@ CREATE TABLE `posters` (
 --
 
 INSERT INTO `posters` (`id_poster`, `id`, `price`, `title`, `desc`, `pic1`, `pic2`, `pic3`, `pic4`, `pic5`) VALUES
-(5, 1, 2599, 'HTC', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nisl eu vestibulum auctor, purus velit consequat enim, sit amet convallis est diam consequat neque. Cras velit nisi, laoreet nec ante vel, sodales sagittis magna. Quisque rutrum purus in facilisis tempus. Ut gravida ipsum id egestas consectetur. Nullam finibus, massa ornare condimentum elementum, ex justo sodales lacus, eu pulvinar urna ex et tellus. Aliquam erat volutpat. In dignissim mi maximus, ultrices elit sit amet, vestibulum nulla. Cras mauris lacus, ultricies ac enim vel, tempus accumsan elit.', 'x3.png', '', '', '', ''),
-(8, 1, 1999, 'Sony', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nisl eu vestibulum auctor, purus velit consequat enim, sit amet convallis est diam consequat neque. Cras velit nisi, laoreet nec ante vel, sodales sagittis magna. Quisque rutrum purus in facilisis tempus. Ut gravida ipsum id egestas consectetur. Nullam finibus, massa ornare condimentum elementum, ex justo sodales lacus, eu pulvinar urna ex et tellus. Aliquam erat volutpat. In dignissim mi maximus, ultrices elit sit amet, vestibulum nulla. Cras mauris lacus, ultricies ac enim vel, tempus accumsan elit.', 's9plus-2.png', 's9plus-3.png', 'x1.png', 'x2.png', 'x3.png'),
-(9, 1, 1399, 'Xiaomi', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nisl eu vestibulum auctor, purus velit consequat enim, sit amet convallis est diam consequat neque. Cras velit nisi, laoreet nec ante vel, sodales sagittis magna. Quisque rutrum purus in facilisis tempus. Ut gravida ipsum id egestas consectetur. Nullam finibus, massa ornare condimentum elementum, ex justo sodales lacus, eu pulvinar urna ex et tellus. Aliquam erat volutpat. In dignissim mi maximus, ultrices elit sit amet, vestibulum nulla. Cras mauris lacus, ultricies ac enim vel, tempus accumsansdf elit. Å¼Ã³Å‚Ä‡', 's9plus-1.png', 's9plus-2.png', 'x1.png', 'x2.png', 'x3.png'),
 (10, 1, 4999, 'iPhone X', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nisl eu vestibulum auctor, purus velit consequat enim, sit amet convallis est diam consequat neque. Cras velit nisi, laoreet nec ante vel, sodales sagittis magna. Quisque rutrum purus in facilisis tempus. Ut gravida ipsum id egestas consectetur. Nullam finibus, massa ornare condimentum elementum, ex justo sodales lacus, eu pulvinar urna ex et tellus. Aliquam erat volutpat. In dignissim mi maximus, ultrices elit sit amet, vestibulum nulla. Cras mauris lacus, ultricies ac enim vel, tempus accumsan elit.', 'x1.png', 'x2.png', 'x3.png', '', ''),
-(21, 3, 3499, 'Samsung Galaxy s9+', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nisl eu vestibulum auctor, purus velit consequat enim, sit amet convallis est diam consequat neque. Cras velit nisi, laoreet nec ante vel, sodales sagittis magna. Quisque rutrum purus in facilisis tempus. Ut gravida ipsum id egestas consectetur. Nullam finibus, massa ornare condimentum elementum, ex justo sodales lacus, eu pulvinar urna ex et tellus. Aliquam erat volutpat. In dignissim mi maximus, ultrices elit sit amet, vestibulum nulla. Cras mauris lacus, ultricies ac enim vel, tempus accumsan elit.', 's9plus-1.png', 's9plus-2.png', 's9plus-3.png', '', ''),
 (26, 4, 2799, 'Samsung Galaxy s9+', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper commodo leo et lacinia. Aliquam pellentesque tristique felis, ut convallis est varius ultrices. Mauris at lorem id arcu egestas tincidunt ut vitae diam. Proin id semper odio. Aenean consequat augue ut est accumsan accumsan. Cras nec sem et est pellentesque ultricies eget euismod leo. Etiam interdum pharetra tellus in ullamcorper. Sed placerat libero vel elementum porttitor.', '1551784781s9plus-1.png', '1551784781s9plus-2.png', '1551784781s9plus-3.png', '', ''),
 (27, 7, 1499, 'Xiaomi Mi8 Pro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada a tortor ac tincidunt. Sed pharetra est sit amet nulla blandit malesuada. Cras tellus risus, lacinia nec turpis vel, posuere venenatis diam. Donec aliquam non ex eu convallis. Cras facilisis, odio at feugiat suscipit, metus ipsum tristique ante, sit amet tincidunt elit est ut eros. Vivamus vulputate imperdiet orci vel fringilla. In ultrices ornare ipsum sed porttitor. Curabitur a tempus metus, vitae consectetur nisl. Vestibulum dictum iaculis ligula non egestas. Suspendisse potenti.', '15526644048pro1.png', '15526644048pro2.png', '15526644048pro3.png', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `tel_num`
+--
+
+CREATE TABLE `tel_num` (
+  `id` int(11) NOT NULL,
+  `number` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `tel_num`
+--
+
+INSERT INTO `tel_num` (`id`, `number`) VALUES
+(1, 987654123),
+(3, 123456789),
+(7, 456765834);
 
 -- --------------------------------------------------------
 
@@ -83,10 +125,22 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`) VALUES
 --
 
 --
+-- Indeksy dla tabeli `addresses`
+--
+ALTER TABLE `addresses`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeksy dla tabeli `posters`
 --
 ALTER TABLE `posters`
   ADD PRIMARY KEY (`id_poster`);
+
+--
+-- Indeksy dla tabeli `tel_num`
+--
+ALTER TABLE `tel_num`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeksy dla tabeli `users`

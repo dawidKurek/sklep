@@ -8,7 +8,8 @@
         <?php
             $query="SELECT * FROM posters WHERE id_poster=".$_GET['id_poster']." ";
             $result=mysqli_query($dbc, $query);
-            $row=mysqli_fetch_assoc($result);         
+            $row=mysqli_fetch_assoc($result);   
+            $user_id=$row['id'];
         ?>
             <div id="image">
                 <img src="img/<?=$row['pic1']?>">
@@ -33,6 +34,32 @@
 
             <div class="description">
                 <?=$row['desc']?>
+            </div>
+
+            <div class="contact_box">
+                <?php 
+                    
+                        $query="SELECT * FROM users WHERE id='$user_id' "; 
+                        $result=mysqli_query($dbc, $query);
+                        $row=mysqli_fetch_assoc($result);
+                        $id_poster=$_GET['id_poster'];
+                                       
+                ?>
+                    <div class="contact_details">
+                        <span>Wystawione przez: </span>                                          <?=$row['username']?>
+
+                    </div>
+                    <div class="contact_details">
+                        <span>Email: </span><?=$row['email']?> 
+                    </div>
+                    <div class="contact_details">
+                        <?php
+                            $query="SELECT * FROM tel_num WHERE id='$user_id' "; 
+                            $result=mysqli_query($dbc, $query);
+                            $row=mysqli_fetch_assoc($result);
+                        ?>
+                        <span>Nr. tel:</span> <?=$row['number']?> 
+                    </div>
             </div>
             
         

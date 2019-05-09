@@ -38,6 +38,8 @@
                 <?=$row['desc']?>
             </div>
             <a class="a-button" href="my-poster-edit.php?id_poster=<?=$_GET['id_poster']?>">Edytuj</a>
+            <a class="del-button" href="my-poster-delete.php?id_poster=<?=$_GET['id_poster']?>">Usuń</a>
+            
         
 
     </div>
